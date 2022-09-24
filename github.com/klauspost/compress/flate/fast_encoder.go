@@ -104,7 +104,8 @@ func (e *fastGen) addBlock(src []byte) int32 {
 			}
 			// Move down
 			offset := int32(len(e.hist)) - maxMatchOffset
-			copy(e.hist[0:maxMatchOffset], e.hist[offset:])
+			// copy(e.hist[0:maxMatchOffset], e.hist[offset:])
+			*(*[maxMatchOffset]byte)(e.hist) = *(*[maxMatchOffset]byte)(e.hist[offset:])
 			e.cur += offset
 			e.hist = e.hist[:maxMatchOffset]
 		}
@@ -117,7 +118,7 @@ func (e *fastGen) addBlock(src []byte) int32 {
 // hash4 returns the hash of u to fit in a hash table with h bits.
 // Preferably h should be a constant and should always be <32.
 func hash4u(u uint32, h uint8) uint32 {
-	return (u * prime4bytes) >> ((32 - h) & reg8SizeMask32)
+	return (u * prime4bytes) >> (32 - h)
 }
 
 type tableEntryPrev struct {
@@ -179,7 +180,7 @@ func (e *fastGen) matchlen(s, t int32, src []byte) int32 {
 // matchlenLong will return the match length between offsets and t in src.
 // It is assumed that s > t, that t >=0 and s < len(src).
 func (e *fastGen) matchlenLong(s, t int32, src []byte) int32 {
-	if debugDecode {
+	if debugDeflate {
 		if t >= s {
 			panic(fmt.Sprint("t >=s:", t, s))
 		}
