@@ -1532,6 +1532,14 @@ def go_deps():
         ],
     )
     go_repository(
+        name = "com_github_colinmarc_hdfs_v2",
+        build_file_proto_mode = "disable_global",
+        importpath = "github.com/colinmarc/hdfs/v2",
+        # TODO: mirror this repo (to fix, run `./dev generate bazel --mirror`)
+        sum = "h1:x0hw/m+o3UE20Scso/KCkvYNc9Di39TBlCfGMkJ1/a0=",
+        version = "v2.1.1",
+    )
+    go_repository(
         name = "com_github_containerd_aufs",
         build_file_proto_mode = "disable_global",
         importpath = "github.com/containerd/aufs",
@@ -6624,6 +6632,14 @@ def go_deps():
         ],
     )
     go_repository(
+        name = "com_github_pborman_getopt",
+        build_file_proto_mode = "disable_global",
+        importpath = "github.com/pborman/getopt",
+        # TODO: mirror this repo (to fix, run `./dev generate bazel --mirror`)
+        sum = "h1:7822vZ646Atgxkp3tqrSufChvAAYgIy+iFEGpQntwlI=",
+        version = "v0.0.0-20180729010549-6fdd0a2c7117",
+    )
+    go_repository(
         name = "com_github_pborman_uuid",
         build_file_proto_mode = "disable_global",
         importpath = "github.com/pborman/uuid",
@@ -6712,6 +6728,14 @@ def go_deps():
         urls = [
             "https://storage.googleapis.com/cockroach-godeps/gomod/github.com/pierrec/lz4/com_github_pierrec_lz4-v2.6.0+incompatible.zip",
         ],
+    )
+    go_repository(
+        name = "com_github_pierrec_lz4_v4",
+        build_file_proto_mode = "disable_global",
+        importpath = "github.com/pierrec/lz4/v4",
+        # TODO: mirror this repo (to fix, run `./dev generate bazel --mirror`)
+        sum = "h1:ieHkV+i2BRzngO4Wd/3HGowuZStgq6QkPsD1eolNAO4=",
+        version = "v4.1.8",
     )
     go_repository(
         name = "com_github_pierrre_compare",
@@ -8169,6 +8193,22 @@ def go_deps():
         urls = [
             "https://storage.googleapis.com/cockroach-godeps/gomod/github.com/xiang90/probing/com_github_xiang90_probing-v0.0.0-20190116061207-43a291ad63a2.zip",
         ],
+    )
+    go_repository(
+        name = "com_github_xitongsys_parquet_go",
+        build_file_proto_mode = "disable_global",
+        importpath = "github.com/xitongsys/parquet-go",
+        # TODO: mirror this repo (to fix, run `./dev generate bazel --mirror`)
+        sum = "h1:MhCaXii4eqceKPu9BwrjLqyK10oX9WF+xGhwvwbw7xM=",
+        version = "v1.6.2",
+    )
+    go_repository(
+        name = "com_github_xitongsys_parquet_go_source",
+        build_file_proto_mode = "disable_global",
+        importpath = "github.com/xitongsys/parquet-go-source",
+        # TODO: mirror this repo (to fix, run `./dev generate bazel --mirror`)
+        sum = "h1:a742S4V5A15F93smuVxA60LQWsrCnN8bKeWDBARU1/k=",
+        version = "v0.0.0-20200817004010-026bad9b25d0",
     )
     go_repository(
         name = "com_github_xlab_treeprint",

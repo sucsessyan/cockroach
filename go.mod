@@ -204,6 +204,7 @@ require (
 	github.com/xdg-go/pbkdf2 v1.0.0
 	github.com/xdg-go/scram v1.0.2
 	github.com/xdg-go/stringprep v1.0.2
+	github.com/xitongsys/parquet-go v1.6.2
 	github.com/zabawaba99/go-gitignore v0.0.0-20200117185801-39e6bddfb292
 	go.opentelemetry.io/otel v1.0.0-RC3
 	go.opentelemetry.io/otel/exporters/jaeger v1.0.0-RC3
@@ -326,6 +327,7 @@ require (
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/openzipkin/zipkin-go v0.2.5 // indirect
 	github.com/pelletier/go-toml v1.9.3 // indirect
+	github.com/pierrec/lz4/v4 v4.1.8 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pkg/profile v1.6.0 // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
@@ -350,6 +352,7 @@ require (
 	github.com/twitchtv/twirp v8.1.0+incompatible // indirect
 	github.com/twpayne/go-kml v1.5.2 // indirect
 	github.com/urfave/cli/v2 v2.3.0 // indirect
+	github.com/xitongsys/parquet-go-source v0.0.0-20200817004010-026bad9b25d0 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	go.etcd.io/etcd/api/v3 v3.6.0-alpha.0 // indirect
 	go.mongodb.org/mongo-driver v1.5.1 // indirect

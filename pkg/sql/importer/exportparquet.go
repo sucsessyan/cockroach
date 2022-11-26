@@ -166,6 +166,10 @@ func (pc *ParquetColumn) GetEncoder() (func(datum tree.Datum) (interface{}, erro
 	return pc.encodeFn, nil
 }
 
+func (pc *ParquetColumn) GetSchemaElement() *parquet.SchemaElement {
+	return pc.definition.SchemaElement
+}
+
 // newParquetColumns creates a list of parquet columns, given the input relation's column types.
 func newParquetColumns(typs []*types.T, sp execinfrapb.ExportSpec) ([]ParquetColumn, error) {
 	parquetColumns := make([]ParquetColumn, len(typs))
